@@ -2,19 +2,41 @@
  function doSomething(){
   console.log('doSomething');
  }
+
+ function detectKeyPress(e){
+  console.log('You clicked '+""+ e.key);
+ }
+
+ function worksOnlyTabEnter(){
+  console.log('you pressed enter');
+ }
+
+ function worksOnlyTabSpace(){
+  console.log('you pressed Space');
+ }
+
+ function submitForm(){
+  console.log('you submit the form.');
+ }
+
+
+ 
 </script>
 
 <template>
   <section>
     <h1>Events Vue.js</h1>
-    <!-- <form action="https://google.com/search"> -->
+    <form @submit="submitForm()" action="https://google.com/search">
       <div class="div">
-        <input @click="console.log('World')" type="text" name="q"/>
-      <button @click="console.log('hi')" class="bg-red-500">
-        Do Something
+        <!-- <input @keypress.space="worksOnlyTabSpace()" @keypress.enter="worksOnlyTabEnter()" type="text" name="q" /> -->
+        <input type="text" name="q" />
+        <!-- <input @keypress="detectKeyPress($event)" type="text" name="q"/> -->
+      <!-- <button @click="doSomething()" class="bg-red-500"> -->
+        <button type="submit" class="bg-red-500">
+        Submit form
       </button>
       </div>
-    <!-- </form> -->
+    </form>
   </section>
 </template>
 
