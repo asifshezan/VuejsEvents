@@ -1,5 +1,5 @@
 <script setup>
-import wpmessage from './components/wpmessage.vue';
+import whatsapp from './components/whatsapp.vue';
 
  function doSomething(){
   console.log('doSomething');
@@ -27,7 +27,7 @@ import wpmessage from './components/wpmessage.vue';
 
 <template>
 
-<wpmessage />
+<whatsapp/>
 
 
 

@@ -1,22 +1,24 @@
 <script setup>
 import { ref } from "vue"
-
-const message = ref([
-  'asif shezan'
+const messages = ref([
+  'Hi Whats up',
 ])
-
 
 const mes = ref("")
 
 function sendMessage(){
-  // console.log(mes.value);
-  // message.value.push('Rendom Message');
-
-  message.value.push(mes.value),
-  mes.value= ""
+    // console.log(mes.value)
+    messages.value.push(mes.value)
+    mes.value = ""
+    // message.value.push("Render Message")
 }
 
-
+// function sendMessage() { 
+//   // console.log(msg.value)
+//   // messages.value.push("Random Message")
+//   messages.value.push(msg.value)
+//   msg.value = ""
+// }
 </script>
 
 <template>
@@ -30,7 +32,7 @@ function sendMessage(){
           <!-- Left -->
           <div class="w-1/3 border flex flex-col">
             <!-- Header -->
-            <div class="py-2 px-3 bg-grey-lighter flex flex-row justify-between items-center">
+            <div class="py-2 px-3 bg-grey-darkest flex flex-row justify-between items-center">
               <div>
                 <img class="w-10 h-10 rounded-full" src="https://www.famousbirthdays.com/faces/wessen-andrew-image.jpg" />
               </div>
@@ -55,19 +57,19 @@ function sendMessage(){
             </div>
 
             <!-- Search -->
-            <div class="py-2 px-2 bg-grey-lightest">
+            <div class="py-2 px-2 bg-grey-darkest">
               <input type="text" class="w-full px-2 py-2 text-sm" placeholder="Search or start new chat" />
             </div>
 
             <!-- Contacts -->
-            <div class="bg-grey-lighter flex-1 overflow-auto">
+            <div class="bg-grey-darkest flex-1 overflow-auto">
               <div class="px-3 flex items-center bg-grey-dark cursor-pointer">
                 <div>
                   <img class="h-12 w-12 rounded-full" src="https://darrenjameseeley.files.wordpress.com/2014/09/expendables3.jpeg" />
                 </div>
-                <div class="ml-4 flex-1 border-b border-grey-dark py-4">
+                <div class="ml-4 flex-1 border-b border-grey-darkest py-4">
                   <div class="flex items-bottom justify-between">
-                    <p class="text-grey-darkest">New Movie! Expendables 4 </p>
+                    <p class="text-grey-darkest">New Movie! Expendables 4</p>
                     <p class="text-xs text-grey-darkest">12:45 pm</p>
                   </div>
                   <p class="text-grey-dark mt-1 text-sm">Get Andrés on this movie ASAP!</p>
@@ -85,11 +87,11 @@ function sendMessage(){
                   <p class="text-grey-dark mt-1 text-sm">I'll be back</p>
                 </div>
               </div>
-              <div class="bg-black px-3 flex items-center hover:bg-grey-lighter cursor-pointer">
+              <div class="bg-black px-3 flex items-center hover:bg-grey-darkest cursor-pointer">
                 <div>
                   <img class="h-12 w-12 rounded-full" src="https://www.famousbirthdays.com/headshots/russell-crowe-6.jpg" />
                 </div>
-                <div class="ml-4 flex-1 border-b border-grey-lighter py-4">
+                <div class="ml-4 flex-1 border-b border-grey-darkest py-4">
                   <div class="flex items-bottom justify-between">
                     <p class="text-grey-darkest">Russell Crowe</p>
                     <p class="text-xs text-grey-darkest">12:45 pm</p>
@@ -97,11 +99,11 @@ function sendMessage(){
                   <p class="text-grey-dark mt-1 text-sm">Hold the line!</p>
                 </div>
               </div>
-              <div class="bg-black px-3 flex items-center hover:bg-grey-lighter cursor-pointer">
+              <div class="bg-black px-3 flex items-center hover:bg-grey-darkest cursor-pointer">
                 <div>
                   <img class="h-12 w-12 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGpYTzuO0zLW7yadaq4jpOz2SbsX90okb24Z9GtEvK6Z9x2zS5" />
                 </div>
-                <div class="ml-4 flex-1 border-b border-grey-lighter py-4">
+                <div class="ml-4 flex-1 border-b border-grey-darkest py-4">
                   <div class="flex items-bottom justify-between">
                     <p class="text-grey-darkest">Tom Cruise</p>
                     <p class="text-xs text-grey-darkest">12:45 pm</p>
@@ -109,11 +111,11 @@ function sendMessage(){
                   <p class="text-grey-dark mt-1 text-sm">Show me the money!</p>
                 </div>
               </div>
-              <div class="bg-black px-3 flex items-center hover:bg-grey-lighter cursor-pointer">
+              <div class="bg-black px-3 flex items-center hover:bg-grey-darkest cursor-pointer">
                 <div>
                   <img class="h-12 w-12 rounded-full" src="https://www.famousbirthdays.com/faces/ford-h-image.jpg" />
                 </div>
-                <div class="ml-4 flex-1 border-b border-grey-lighter py-4">
+                <div class="ml-4 flex-1 border-b border-grey-darkest py-4">
                   <div class="flex items-bottom justify-between">
                     <p class="text-grey-darkest">Harrison Ford</p>
                     <p class="text-xs text-grey-darkest">12:45 pm</p>
@@ -127,13 +129,13 @@ function sendMessage(){
           <!-- Right -->
           <div class="w-2/3 border flex flex-col">
             <!-- Header -->
-            <div class="py-2 px-3 bg-grey-lighter flex flex-row justify-between items-center">
+            <div class="py-2 px-3 bg-grey-darkest flex flex-row justify-between items-center">
               <div class="flex items-center">
                 <div>
                   <img class="w-10 h-10 rounded-full" src="https://darrenjameseeley.files.wordpress.com/2014/09/expendables3.jpeg" />
                 </div>
                 <div class="ml-4">
-                  <p class="text-grey-darkest">New Movie! Expendables 4 {{ mes }}</p>
+                  <p class="text-grey-darkest">New Movie! Expendables 4</p>
                   <p class="text-grey-darker text-xs mt-1">Andrés, Tom, Harrison, Arnold, Sylvester</p>
                 </div>
               </div>
@@ -158,22 +160,22 @@ function sendMessage(){
             </div>
 
             <!-- Messages -->
-            <div class="flex-1 overflow-auto" style="background-color: #ab6c2d" id="messageBox">
+            <div class="flex-1 overflow-auto" style="background-color: #bb7024" id="messageBox">
               <div class="py-2 px-3">
                 <div class="flex justify-center mb-2">
-                  <div class="rounded py-2 px-4" style="background-color: #0e3949">
+                  <div class="rounded py-2 px-4" style="background-color: #2582a6">
                     <p class="text-sm uppercase">February 20, 2018</p>
                   </div>
                 </div>
 
                 <div class="flex justify-center mb-4">
-                  <div class="rounded py-2 px-4" style="background-color: #726004">
+                  <div class="rounded py-2 px-4" style="background-color: #847113">
                     <p class="text-xs">Messages to this chat and calls are now secured with end-to-end encryption. Tap for more info.</p>
                   </div>
                 </div>
 
                 <div class="flex mb-2">
-                  <div class="rounded py-2 px-3" style="background-color: #010101">
+                  <div class="rounded py-2 px-3" style="background-color: #e57b7b">
                     <p class="text-sm text-teal">Sylverter Stallone</p>
                     <p class="text-sm mt-1">Hi everyone! Glad you could join! I am making a new movie.</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
@@ -181,7 +183,7 @@ function sendMessage(){
                 </div>
 
                 <div class="flex mb-2">
-                  <div class="rounded py-2 px-3" style="background-color: #010101">
+                  <div class="rounded py-2 px-3" style="background-color: #c86f6f">
                     <p class="text-sm text-purple">Tom Cruise</p>
                     <p class="text-sm mt-1">Hi all! I have one question for the movie</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
@@ -189,7 +191,7 @@ function sendMessage(){
                 </div>
 
                 <div class="flex mb-2">
-                  <div class="rounded py-2 px-3" style="background-color: #010101">
+                  <div class="rounded py-2 px-3" style="background-color: #ca6767">
                     <p class="text-sm text-orange">Harrison Ford</p>
                     <p class="text-sm mt-1">Again?</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
@@ -197,7 +199,7 @@ function sendMessage(){
                 </div>
 
                 <div class="flex mb-2">
-                  <div class="rounded py-2 px-3" style="background-color: #010101">
+                  <div class="rounded py-2 px-3" style="background-color: #9f4e4e">
                     <p class="text-sm text-orange">Russell Crowe</p>
                     <p class="text-sm mt-1">Is Andrés coming for this one?</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
@@ -205,7 +207,7 @@ function sendMessage(){
                 </div>
 
                 <div class="flex mb-2">
-                  <div class="rounded py-2 px-3" style="background-color: #010101">
+                  <div class="rounded py-2 px-3" style="background-color: #a25b5b">
                     <p class="text-sm text-teal">Sylverter Stallone</p>
                     <p class="text-sm mt-1">He is. Just invited him to join.</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
@@ -213,14 +215,21 @@ function sendMessage(){
                 </div>
 
                 <div class="flex justify-end mb-2">
-                  <div class="rounded py-2 px-3" style="background-color: hsl(253, 74%, 45%)">
+                  <div class="rounded py-2 px-3" style="background-color: #79ab43">
                     <p class="text-sm mt-1">Hi guys.</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
                   </div>
                 </div>
 
+                <div class="flex justify-end mb-2">
+                  <div class="rounded py-2 px-3" style="background-color: #3f5825">
+                    <p class="text-sm mt-1">Count me in</p>
+                    <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
+                  </div>
+                </div>
+
                 <div class="flex justify-end mb-2" v-for="(message,index) in messages" :key="index">
-                  <div class="rounded py-2 px-3" style="background-color: hsl(253, 74%, 45%)">
+                  <div class="rounded py-2 px-3" style="background-color: #619b23">
                     <p class="text-sm mt-1">{{ message }}</p>
                     <p class="text-right text-xs text-grey-dark mt-1">12:45 pm</p>
                   </div>
@@ -230,15 +239,15 @@ function sendMessage(){
             </div>
 
             <!-- Input -->
-            <div class="bg-grey-lighter px-4 py-4 flex items-center">
+            <div class="bg-grey-darkest px-4 py-4 flex items-center">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                   <path opacity=".45" fill="#263238" d="M9.153 11.603c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962zm-3.204 1.362c-.026-.307-.131 5.218 6.063 5.551 6.066-.25 6.066-5.551 6.066-5.551-6.078 1.416-12.129 0-12.129 0zm11.363 1.108s-.669 1.959-5.051 1.959c-3.505 0-5.388-1.164-5.607-1.959 0 0 5.912 1.055 10.658 0zM11.804 1.011C5.609 1.011.978 6.033.978 12.228s4.826 10.761 11.021 10.761S23.02 18.423 23.02 12.228c.001-6.195-5.021-11.217-11.216-11.217zM12 21.354c-5.273 0-9.381-3.886-9.381-9.159s3.942-9.548 9.215-9.548 9.548 4.275 9.548 9.548c-.001 5.272-4.109 9.159-9.382 9.159zm3.108-9.751c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962z"></path>
                 </svg>
               </div>
               <div class="flex mx-4 justify-between w-full">
-                <input v-model="mes" class="w-full border rounded px-2 py-2" type="text" />
-                <button @click="sendMessage()" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+                <input @keypress.enter="sendMessage()" v-model="mes" class="w-full border rounded px-2 py-2" type="text" />
+                <button @click="sendMessage()" class="ml-2 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Send</button>
               </div>
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
