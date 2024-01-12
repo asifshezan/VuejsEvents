@@ -1,4 +1,6 @@
 <script setup>
+import wpmessage from './components/wpmessage.vue';
+
  function doSomething(){
   console.log('doSomething');
  }
@@ -24,9 +26,14 @@
 </script>
 
 <template>
+
+<wpmessage />
+
+
+
   <section>
     <h1>Events Vue.js</h1>
-    <form @submit="submitForm()" action="https://google.com/search">
+    <form @submit.prevent="submitForm()" action="https://google.com/search">
       <div class="div">
         <!-- <input @keypress.space="worksOnlyTabSpace()" @keypress.enter="worksOnlyTabEnter()" type="text" name="q" /> -->
         <input type="text" name="q" />
