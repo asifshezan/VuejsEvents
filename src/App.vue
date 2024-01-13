@@ -1,5 +1,6 @@
 <script setup>
 import whatsapp from './components/whatsapp.vue';
+import stopevent from './components/stopevent.vue';
 
  function doSomething(){
   console.log('doSomething');
@@ -27,6 +28,7 @@ import whatsapp from './components/whatsapp.vue';
 
 <template>
 
+<stopevent/>
 <whatsapp/>
 
 
