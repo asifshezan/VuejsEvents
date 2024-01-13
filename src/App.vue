@@ -1,6 +1,7 @@
 <script setup>
 import whatsapp from './components/whatsapp.vue';
 import stopevent from './components/stopevent.vue';
+import lightbox from './components/lightbox.vue';
 
  function doSomething(){
   console.log('doSomething');
@@ -28,6 +29,8 @@ import stopevent from './components/stopevent.vue';
 
 <template>
 
+
+<lightbox/>
 <stopevent/>
 <whatsapp/>
 
