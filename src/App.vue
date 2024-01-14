@@ -2,6 +2,7 @@
 import whatsapp from './components/whatsapp.vue';
 import stopevent from './components/stopevent.vue';
 import lightbox from './components/lightbox.vue';
+import faq from './components/faq.vue';
 
  function doSomething(){
   console.log('doSomething');
@@ -30,6 +31,7 @@ import lightbox from './components/lightbox.vue';
 <template>
 
 
+<faq/>
 <lightbox/>
 <stopevent/>
 <whatsapp/>
